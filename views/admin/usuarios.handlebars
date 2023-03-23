@@ -1,0 +1,22 @@
+<h1>Editar Usuarios</h1>
+
+{{#each usuarios}}
+  <div class="list-group mt-3">
+    <a href="/admin/editusuario/{{_id}}" class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">Nome do usuario: {{nome}}</h5>
+        <small>ID: {{_id}}</small>
+      </div>
+      <input type="hidden" name="id" value="{{_id}}">
+      <p class="mb-1">Email: {{email}}</p>
+      {{#if eAdmin}}
+          <small>Administrador</small>
+      {{else}}
+          <small>Usuario Padrão</small>
+      {{/if}}
+      
+    </a>
+  </div>
+{{else}}
+
+{{/each}}

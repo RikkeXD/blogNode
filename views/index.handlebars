@@ -1,0 +1,30 @@
+<div class="bg-light p-5 rounded-lg m-3">
+  {{#if user}}
+    {{#if dadosUser}}
+      <h1 class="display-4">{{dadosUser.nome}}, Seja bem-vindo</h1>
+    {{else}}
+    {{/if}}
+  {{else}}
+    <h1 class="display-4">Bem vindo ao Blog do Rikke</h1>
+    <p class="lead">Um simples blog para visualizar posts e ideias postadas! </p>
+    <hr class="my-4">
+    <p>Registre-se e começe a utilizar e comece a criar seus posts</p>
+    <a class="btn btn-primary btn-lg" href="/usuarios/registro" role="button">Crie uma conta</a>
+  {{/if}}
+</div>
+
+{{#each postagens}}
+<div class="card mt-3">
+    <div class="card-body">
+        <h3>{{titulo}}</h3>
+        <p>{{descricao}}</p>
+        <a href="/postagens/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+        <hr>
+        <small>Categoria: {{categoria.nome}}</small>
+        <small>Data da publicação: {{data}}</small>
+    </div>
+</div>
+{{else}}
+    <h5>Nenhuma Postagem</h5>
+{{/each}}
+
