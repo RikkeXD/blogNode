@@ -16,7 +16,7 @@
             <label for="descricao">Descrição: </label>
             <input type="text" name="descricao" class="form-control" value="{{postagem.descricao}}" required>
             <label for="conteudo">Conteúdo: </label>
-            <textarea name="conteudo" class="form-control" required>{{postagem.descricao}}</textarea>
+            <textarea name="conteudo" class="form-control" required>{{postagem.conteudo}}</textarea>
             <select name="categoria" class="form-select mt-3">
                 {{#each categorias}}
                     <option value="{{_id}}">{{nome}}</option>
