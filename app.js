@@ -14,7 +14,7 @@ const Categoria = mongoose.model('categorias')
 const usuarios = require(`./routes/usuario`)
 const passport = require('passport')
 require(`./config/auth`)(passport)
-const eAdmin = require('../ProjetoNodeJS #1/helpers/eAdmin')
+const eAdmin = require('./helpers/eAdmin')
 const serializeUser = require('./config/auth').serializeUser
 require('./models/Usuario')
 const Usuario = mongoose.model('usuarios')
